@@ -1,5 +1,5 @@
 header img {
-    max-width: 70px;
+    max-width: 100px;
 }
 
 body {
@@ -22,14 +22,18 @@ body.img-back-2 {
 
 body.img-back-3 {
     background-image: url(../public/horrorrrrrrrrrr.jpg);
-    background-position-x: center;
 }
 
 body.img-back-games {
     background-image: url(../public/bambola.jpg);
-    background-position-x: center;
 }
 
+body.img-back-home {
+    background-image: url(../public/gifff.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
 
 .text-red {
     color: #B20000;
@@ -47,4 +51,8 @@ body.img-back-games {
 .gap-container {
     flex-wrap: wrap;
     gap: 233px
+}
+
+.my-gap {
+    gap: 80px;
 }

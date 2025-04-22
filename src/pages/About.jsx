@@ -1,11 +1,16 @@
 export default function About() {
 
-    document.body.classList.remove('img-back');
-    document.body.classList.remove('img-back-2');
-    document.body.classList.remove('img-back-3');
-    document.body.classList.remove('img-back-games');
+    document.body.classList.remove(
+        'img-back',
+        'img-back-2',
+        'img-back-3',
+        'img-back-home',
+        'img-back-games'
+    );
+    document.body.classList.remove('img-back-home');
 
     return <div className="container mt-5">
+
         <h1 className="mb-4">Di noi</h1>
         <p>
             Siamo <strong>Marco Vacchi</strong> ed <strong>Enrico Ciccolini</strong>, due sviluppatori junior con una passione per il codice, le storie coinvolgenti e le esperienze interattive.
@@ -22,5 +27,6 @@ export default function About() {
         <p>
             Grazie per essere qui e buon divertimento nella tua avventura nella Book Room!
         </p>
+
     </div>
 };

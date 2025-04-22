@@ -473,5 +473,4 @@ const horrorRooms = [
         sound: ''
     }
 ];
-
 export default horrorRooms;

@@ -1,7 +1,7 @@
 import NavBar from './component/NavBar';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
-import Games from './pages/Games'
+import Games from './pages/Games';
 import LastCard from './pages/LastCard';
 import About from './pages/About';
 import BuriedCard from './pages/BuriedCard';
@@ -9,29 +9,27 @@ import ThirdCard from './pages/ThirdCard';
 
 export default function App() {
 
-  return (
-    <>
+  return <div>
 
-      <BrowserRouter >
-        <Routes>
-          <Route element={<NavBar />}>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/games" >
-              <Route index element={<Games />} />
-              <Route path="ultimo/:slug" element={<LastCard />} />
-              <Route path="sepolti/:slug" element={<BuriedCard />} />
-              <Route path="horror/:slug" element={<ThirdCard />} />
-            </Route >
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<h1>pagina non trovata </h1>} />
-          </Route>
+    <BrowserRouter >
+      <Routes>
+        <Route element={<NavBar />}>
+          <Route path="/" element={<Homepage />} />
 
-        </Routes>
+          <Route path="/games" >
+            <Route index element={<Games />} />
+            <Route path="ultimo/:slug" element={<LastCard />} />
+            <Route path="sepolti/:slug" element={<BuriedCard />} />
+            <Route path="horror/:slug" element={<ThirdCard />} />
+          </Route >
 
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<h1>pagina non trovata </h1>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
 
-      </BrowserRouter>
-    </>
-  )
+  </div>
 };
 
 
