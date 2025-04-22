@@ -1,0 +1,50 @@
+header img {
+    max-width: 70px;
+}
+
+body {
+    background-color: #2F2F2F;
+    color: #D2D2D2;
+}
+
+.card {
+    width: 30rem;
+}
+
+body.img-back {
+    background-image: url(../public/creepy.jpg);
+}
+
+body.img-back-2 {
+    background-image: url(../public/fogna.jpg);
+    background-position-x: center;
+}
+
+body.img-back-3 {
+    background-image: url(../public/horrorrrrrrrrrr.jpg);
+    background-position-x: center;
+}
+
+body.img-back-games {
+    background-image: url(../public/bambola.jpg);
+    background-position-x: center;
+}
+
+
+.text-red {
+    color: #B20000;
+}
+
+.img-home {
+    width: 100%;
+    height: 372px;
+}
+
+.h-pick {
+    height: 319px;
+}
+
+.gap-container {
+    flex-wrap: wrap;
+    gap: 233px
+}
