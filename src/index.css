@@ -56,3 +56,12 @@ body.img-back-home {
 .my-gap {
     gap: 80px;
 }
+
+@media (max-width: 500px) {
+    .card {
+        width: 23rem;
+        margin-bottom: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

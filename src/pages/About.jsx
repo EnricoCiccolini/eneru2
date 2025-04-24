@@ -27,6 +27,9 @@ export default function About() {
         <p>
             Grazie per essere qui e buon divertimento nella tua avventura nella Book Room!
         </p>
+        <p>
+            <p>Version: Beta</p>
+        </p>
 
     </div>
 };

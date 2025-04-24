@@ -12,9 +12,9 @@ export default function BuriedCard() {
 
     const scelta = array.choice1 && array.n1 || array.choice2 && array.n2;
 
-    return <div className="d-flex justify-content-center mt-5">
+    return <div className="d-flex justify-content-center mt-5 container">
 
-        <div className="card" >
+        <div className="card card-sm" >
             <img src={array.image} className="card-img-top" alt="ultimo" />
             <div className="card-body">
                 <h5 className="card-title">{array.title}</h5>
