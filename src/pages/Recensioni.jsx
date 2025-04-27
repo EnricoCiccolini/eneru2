@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default function Recensioni() {
 
-    const endPoint = ('http://127.0.0.1:3003/reviews/');
+    const endPoint = ('https://servereneru.onrender.com/reviews/');
     const [alert, setAlert] = useState({ type: '', message: '', alert: '' });
     const [array, setArray] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -67,83 +67,85 @@ export default function Recensioni() {
             });
     };
 
-    return (
-        <>
-            <div className='container'>
-                {alert.message && (
-                    <div className={`alert alert-${alert.type}`}>
-                        {alert.message}
-                    </div>
-                )}
-                <form onSubmit={savePost}>
-                    <div className="mb-3">
-                        <label className="form-label">Email</label>
-                        <input type="text"
-                            name='email'
-                            value={formData.email}
-                            onChange={handleFormData}
-                            placeholder='inserisci una mail valida'
-                            className="form-control"
-                        />
-                    </div>
 
-                    <div className="mb-3">
-                        <label className="form-label">Nome</label>
-                        <input type="text"
-                            name='name'
-                            value={formData.name}
-                            onChange={handleFormData}
-                            placeholder='inserisci il tuo nome'
-                            className="form-control"
-                        />
-                    </div>
+    function star(vote) {
 
-                    <div className="mb-3">
-                        <label className="form-label">Descrizione..</label>
-                        <input type="text"
-                            name='description'
-                            value={formData.description}
-                            onChange={handleFormData}
-                            placeholder='Lasciaci un feedback'
-                            className="form-control"
-                        />
-                    </div>
+        let star = ''
+        for (let index = 0; index < vote; index++) {
+            star += '★'
 
-                    <div className="mb-3">
-                        <label className="form-label">Valutazione</label>
-                        <input type="number"
-                            name='valutation'
-                            value={formData.valutation}
-                            onChange={handleFormData}
-                            placeholder='Votazione: 1-5'
-                            className="form-control"
-                            min={1} max={5}
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div>
-                <ul>
-                    {loading ? (
-                        <div>Caricamento...</div>
-                    ) : (
-                        array.map(({ email, name, description, valutation }, index) => (
-                            <div key={index}>
-                                <li>{email}</li>
-                                <li>{name}</li>
-                                <li>{description}</li>
-                                <li>{valutation}</li>
-                            </div>
-                        ))
-                    )}
-                </ul>
-            </div>
+        }
+        return star
+    }
 
-        </>
-    )
+    return <>
+        <div className='container mt-3'>
+            {alert.message && (
+                <div className={`alert alert-${alert.type}`}>
+                    {alert.message}
+                </div>
+            )}
+            <form onSubmit={savePost}>
+                <div className="mb-3">
+                    <label className="form-label">Email</label>
+                    <input type="text"
+                        name='email'
+                        value={formData.email}
+                        onChange={handleFormData}
+                        placeholder='Inserisci una mail valida'
+                        className="form-control"
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label">Nome</label>
+                    <input type="text"
+                        name='name'
+                        value={formData.name}
+                        onChange={handleFormData}
+                        placeholder='Inserisci il tuo nome'
+                        className="form-control"
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label">Lasciaci un feedback</label>
+                    <input type="text"
+                        name='description'
+                        value={formData.description}
+                        onChange={handleFormData}
+                        placeholder='Lasciaci un feedback'
+                        className="form-control "
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label">Valutazione</label>
+                    <input type="number"
+                        name='valutation'
+                        value={formData.valutation}
+                        onChange={handleFormData}
+                        placeholder='Votazione: 1-5'
+                        className="form-control"
+                        min={1} max={5}
+                    />
+                </div>
+                <button type="submit" className="btn btn-primary">Invia recensione</button>
+            </form>
+        </div>
+
+        {loading ? (
+            <div>Caricamento in corso...</div>
+        ) : (
+            array.map(({ name, description, valutation }, index) => (
+                <div key={index} className="container text-bg-secondary mb-2 mt-5 rounded-3 p-2 card-form">
+                    <h3 className="card-header mb-2">Valutazione:  <span className="text-warning">{star(valutation)}</span></h3>
+                    <div className="card-body">
+                        <h5 className="card-title mb-2">User: {name}</h5>
+                        <textarea className="form-control mb-3" rows="3">{description}</textarea>
+                    </div>
+                </div>
+            ))
+        )}
+    </>
 };
-
-
-// <label for="inputAddress" class="form-label">Valutazione</label>
-//                 <input type="number" class="form-control" placeholder="1-5" min={1} max={5} />

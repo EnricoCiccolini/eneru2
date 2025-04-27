@@ -17,8 +17,8 @@ export default function BuriedCard() {
         <div className="card card-sm" >
             <img src={array.image} className="card-img-top" alt="ultimo" />
             <div className="card-body">
-                <h5 className="card-title">{array.title}</h5>
-                <p className="card-text">{array.body}</p>
+                <h5 className="card-title butcherman-regular">{array.title}</h5>
+                <p className="card-text merriweather-uniquifier">{array.body}</p>
                 <div className="d-flex justify-content-center">
                     {scelta ? (
                         <>

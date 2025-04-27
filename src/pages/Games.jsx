@@ -20,13 +20,13 @@ export default function Games() {
 
     return <div>
 
-        <h3 className="text-center text-red fw-bold mt-5 mb-5">Easiest level</h3>
+        <h2 className="text-center text-red fw-bold mt-5 mb-5 creepster-regular">Easiest level</h2>
         <div className="d-flex justify-content-center mt-5 gap-container">
             <div className="card">
                 <img src="/manicomio.jpg" className="card-img-top" alt="ultimo" />
                 <div className="card-body">
-                    <h3 className="card-title">L'ultimo reparto</h3>
-                    <p className="card-text fw-bold">Sarai solo, un manicomio, spettrale, un'unica uscita... Riuscirai a trovarla?</p>
+                    <h3 className="card-title nosifer-regular">L'ultimo reparto</h3>
+                    <p className="card-text fw-bold cal-sans-regular">Sarai solo, un manicomio, spettrale, un'unica uscita... Riuscirai a trovarla?</p>
                     <div className="d-flex justify-content-center">
                         <Link className="btn btn-secondary" to={"/games/ultimo/:1"} >Gioca ora </Link>
                     </div>
@@ -36,8 +36,8 @@ export default function Games() {
             <div className="card">
                 <img src="/mano.jpg" className="card-img-top" alt="sepolti-vivi" />
                 <div className="card-body">
-                    <h3 className="card-title">Sepolti Vivi </h3>
-                    <p className="card-text fw-bold">Sarai solo, sotto terra, in compagnia di ratti e scheletri, un'unica uscita... Riuscirai a trovarla?</p>
+                    <h3 className="card-title nosifer-regular">Sepolti Vivi </h3>
+                    <p className="card-text fw-bold cal-sans-regular">Sarai solo, sotto terra, in compagnia di ratti e scheletri, un'unica uscita... Riuscirai a trovarla?</p>
                     <div className="d-flex justify-content-center">
                         <Link className="btn btn-secondary" to={"/games/sepolti/:1"} >Gioca ora </Link>
                     </div>
@@ -45,13 +45,13 @@ export default function Games() {
             </div>
         </div>
 
-        <h3 className="text-center text-red fw-bold mt-5 mb-5">Hardest level</h3>
+        <h2 className="text-center text-red fw-bold mt-5 mb-5 creepster-regular">Hardest level</h2>
         <div className="d-flex justify-content-center mt-5 gap-container">
             <div className="card mb-5">
                 <img src="/horror.jpg" className="card-img-top h-pick" alt="horror-story" />
                 <div className="card-body">
-                    <h3 className="card-title">Horror Story</h3>
-                    <p className="card-text fw-bold">Sarai solo, chissà dove, fra anime affrante e un'unica uscita... Riuscirai a trovarla?</p>
+                    <h3 className="card-title nosifer-regular">Horror Story</h3>
+                    <p className="card-text fw-bold cal-sans-regular">Sarai solo, chissà dove, fra anime affrante e un'unica uscita... Riuscirai a trovarla?</p>
                     <div className="d-flex justify-content-center">
                         <Link className="btn btn-secondary" to={"/games/horror/:1"} >Gioca ora </Link>
                     </div>

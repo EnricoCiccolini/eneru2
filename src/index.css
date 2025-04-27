@@ -1,10 +1,76 @@
-header img {
-    max-width: 100px;
+/* ---------------- FONTS ------------------- */
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
 }
+
+.nosifer-regular {
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #B20000;
+}
+
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.butcherman-regular {
+    font-family: "Butcherman", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #B20000;
+    font-size: 25px;
+    text-shadow: 1px 1px black;
+}
+
+.merriweather-uniquifier {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.comic-relief-bold {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ---------------- FONTS ------------------- */
 
 body {
     background-color: #2F2F2F;
     color: #D2D2D2;
+}
+
+.b-color {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.h1-title {
+    font-size: 70px;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #B20000;
+    text-shadow: 2px 2px black;
+}
+
+header img {
+    max-width: 100px;
 }
 
 .card {
@@ -21,7 +87,8 @@ body.img-back-2 {
 }
 
 body.img-back-3 {
-    background-image: url(../public/horrorrrrrrrrrr.jpg);
+    background-image: url(../public/house.jpg);
+    background-position-x: center;
 }
 
 body.img-back-games {
@@ -37,6 +104,8 @@ body.img-back-home {
 
 .text-red {
     color: #B20000;
+    font-size: xxx-large;
+    text-shadow: 4px 4px black;
 }
 
 .img-home {
@@ -63,5 +132,9 @@ body.img-back-home {
         margin-bottom: 25px;
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    .card-form {
+        width: 95%;
     }
 }
