@@ -6,7 +6,7 @@ import LastCard from './pages/LastCard';
 import About from './pages/About';
 import BuriedCard from './pages/BuriedCard';
 import ThirdCard from './pages/ThirdCard';
-import Contatti from './pages/Contatti';
+import Recensioni from './pages/Recensioni';
 // import BackgroundMusic from './component/BackgroundMusic';
 
 export default function App() {
@@ -26,7 +26,7 @@ export default function App() {
           </Route >
 
           <Route path="/about" element={<About />} />
-          <Route path="/contatti" element={<Contatti />} />
+          <Route path="/recensioni" element={<Recensioni />} />
           <Route path="*" element={<h1>pagina non trovata </h1>} />
         </Route>
       </Routes>

@@ -8,7 +8,7 @@ export default function NavBar() {
         <header>
             <nav className="navbar navbar-expand-lg bg-black ">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><img src="/logo.png" alt="123" /></a>
+                    <Link to={"/"} className="nav-link text-white" ><img src="/logo.png" alt="123" /></Link >
                     <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -25,7 +25,7 @@ export default function NavBar() {
                                 <Link to={"/about"} className="nav-link text-white" >Chi siamo</Link >
                             </li>
                             <li className="nav-item">
-                                <Link to={"/contatti"} className="nav-link text-white" >Contatti</Link >
+                                <Link to={"/Recensioni"} className="nav-link text-white" >Recensioni</Link >
                             </li>
                         </ul>
                     </div>
@@ -34,6 +34,6 @@ export default function NavBar() {
         </header>
         <Outlet />
 
-    </div>
+    </div >
 };
 
