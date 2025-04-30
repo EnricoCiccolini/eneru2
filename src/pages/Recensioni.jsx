@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default function Recensioni() {
 
-    const endPoint = ('http://127.0.0.1:3003/reviews/');
+    const endPoint = ('https://servereneru.onrender.com/reviews/');
     const [alert, setAlert] = useState({ type: '', message: '', alert: '' });
     const [array, setArray] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -121,7 +121,7 @@ export default function Recensioni() {
                 </div>
 
                 <div className="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Lasciaci un feedback</label>
+                    <label htmlFor="exampleFormControlTextarea1" className="form-label">Lasciaci un feedback</label>
                     <textarea type="text"
                         name='description'
                         value={formData.description}
